@@ -2,7 +2,7 @@
 <head>
 
     <title> sportopdracht</title>
-    <link rel="stylesheet" type="text/css" href="sport.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sport.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kostya">
 
@@ -14,35 +14,39 @@
 </head>
 
 <body>
-        <div class="navigation">
-            <button id="close-navigation">&lt;</button>
-            <button class="redirect" onclick="location.href = 'sport_main.html';">Menu</button>
-            <button class="redirect" onclick="location.href = 'over_ons.html';">over ons</button>
-            <button class="redirect" onclick="location.href = 'sport (1).html';" style="background-color: antiquewhite;">waarom is sporten belangrijk</button>
-            
 
-            
-            <div class="bottom-text" style="color:beige; top: 57%; position: relative; font-size: 22vw;">
-                hiiii
-
-            </div>
+            <div class="navigation">
+        <button id="close-navigation">&lt;</button>
+        <button class="redirect" onclick="location.href = '/';" >Menu</button>
+        <button class="redirect" onclick="location.href = '/over_ons';" style= "background-color: antiquewhite;">over ons</button>
+        <button class="redirect" onclick="location.href = '/waarom_is_sporten belangrijk';">waarom is sporten belangrijk</button>
+        <script src="{{url_for ('static' ,filename = 'scripts/navigation-bahaviour.js')}}"></script>
 
 
-            <script src="scripts/navigation-bahaviour.js">
 
-            </script>
+    </div>
 
 
 
 
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="pop-up">
             <div class="bar"> 
                 <button id="close-pop-up">x</button>
-                <script src="scripts/pop-up.js">
-                    
-                </script>
+                <script src="{{url_for('static', filename='scripts/pop-up.js')}}"></script>
+
             </div>
             <form>
 
@@ -67,24 +71,24 @@
 
         <div class="leftside_container">
             <div class="images">
-            <p><img src="afbeeldingen/rennen.jpg"  width="115%"></p>
+            <p><img src="{{url_for('static', filename='afbeeldingen/rennen.jpg')}}"  width="115%"></p>
             
-            <img src="afbeeldingen/american_footbal.jpg"  width="115%">
+            <img src="{{url_for('static', filename='afbeeldingen/american_footbal.jpg')}}"  width="115%">
             
-            <p><img src="afbeeldingen/Banner Football.jpg"  width="115%"></p>
+            <p><img src="{{ url_for('static', filename='afbeeldingen/Banner Football.jpg')}}"  width="115%"></p>
             
-            <img src="afbeeldingen/basketbal.jpg" width="115%">
+            <img src="{{url_for('static', filename='afbeeldingen/basketbal.jpg')}}" width="115%">
             
-            <p><img src="afbeeldingen/check.jpg" alt="hi!" width="115%"></p>
+            <p><img src="{{url_for('static', filename='afbeeldingen/check.jpg')}}" alt="hi!" width="115%"></p>
             
-            <div style="text-align: center; background-image: url(afbeeldingen/moroccan-flower.png); width: 115%;">
+            <div style="text-align: center; background-image: url({{url_for('static', filename = 'afbeeldingen/moroccan-flower.png')}}); width: 115%;">
                 Onze vereniging vindt daarom dat sporten belangrijk voor je is. Wil je een sport kiezen bij ons?
                 <p><button style="border-radius: 15%; background-color: aliceblue; color: red; font-size: 28px;" id="open-pop-up"> Meld je aan!</button></p>
                 <script type="text/javascript">
-                    document.getElementById("open-pop-up").onclick = function(){
-                    const pop_up = document.getElementsByClassName("pop-up");
-                    pop_up[0].style.display="block";
-                    
+                document.getElementById("open-pop-up").onclick = function(){
+                const pop_up = document.getElementsByClassName("pop-up");
+                pop_up[0].style.display="block";
+
                     }
                 </script>
             </div>

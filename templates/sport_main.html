@@ -3,16 +3,19 @@
 <head>
     <title>menu</title>
     <meta name="author" content="Kostya">
-    <link rel="stylesheet" type="text/css" href="sport.css"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sport.css')}}">
 </head>
 
 <body>
+
+
+<!-- button script -->
     <div class="navigation">
         <button id="close-navigation">&lt;</button>
-        <button class="redirect" onclick="location.href = 'sport_main.html';" style= "background-color: antiquewhite;">Menu</button>
-        <button class="redirect" onclick="location.href = 'over_ons.html';">over ons</button>
-        <button class="redirect" onclick="location.href = 'sport (1).html';">waarom is sporten belangrijk</button>
-        <script src="scripts/navigation-bahaviour.js"></script>
+        <button class="redirect" onclick="location.href = '/';" style= "background-color: antiquewhite;">Menu</button>
+        <button class="redirect" onclick="location.href = '/over_ons';">over ons</button>
+        <button class="redirect" onclick="location.href = '/waarom_is_sporten belangrijk';">waarom is sporten belangrijk</button>
+        <script src="{{url_for ('static' ,filename = 'scripts/navigation-bahaviour.js')}}"></script>
 
 
 
@@ -23,23 +26,25 @@
     </header>
 
 
-    <!--<div class="leftside_container" style="margin: 5%; margin-top: 8%;">
-        <img src="afbeeldingen/rennen.jpg">
 
-    </div>
--->
+
+
 
     <div class="article" style="margin-top: 15%; margin-left: 12%;">
-        
-    <div class="sub-article" style="margin: 5%;">
-        "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit; 
-        het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
-         Laat ons je helpen de sport te vinden die bij jou past, zodat ook jij kunt ervaren wat sport echt betekent." 
-        <p>- Sport de Vries</p>
-    </div>
-    <img src="afbeeldingen/de_vries.jpg" alt="no image" style="width: 35%; margin-top: 15.5%;">
-    
-    <div style="width: 100%; position: relative; background-color: aqua;">
+
+        <div >
+            <div class="sub-article" style="margin: 5%;">
+                "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit;
+                het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
+                 Laat ons je helpen de sport te vinden die bij jou past, zodat ook jij kunt ervaren wat sport echt betekent."
+                <p>- Sport de Vries</p>
+
+            </div>
+            <img src="{{url_for('static', filename ='afbeeldingen/de_vries.jpg') }}" alt="no image" style="width: 35%; margin-top: 15.5%;">
+        </div>
+
+
+    <div style="width: 100%; position: relative;;">
         <div class="sub-article" style="margin: 5%;">
         "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit; 
         het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
@@ -47,15 +52,9 @@
         <p>- Sport de Vries</p>
         </div>
 
-        <img src="afbeeldingen/de_vries.jpg" alt="no image" width="35%">
+        <img src="{{ url_for('static', filename='afbeeldingen/de_vries.jpg')}}" alt="no image" width="35%">
     
     </div>
-
-
-
-    
-
-    
 
     </div>
 
