@@ -1,13 +1,14 @@
 
-document.getElementById("close-navigation").onclick = function(){
-    let extend = 0;
-    let non_extend = -20;
-    let close = true;
+/*document.getElementById("close-navigation").onclick = function(){
+    var extend = 0;
+    var non_extend = -20;
+    var close = true;
 
-    
     const nav = document.getElementsByClassName("navigation");
     
-    if (nav[0].style.right == String(extend)+"%"){
+    
+    //if (nav[0].style.right == String(extend)+"%"){
+    if (nav[0].style.transform == String(extend)+"%"){
         close = false;
         
     }
@@ -36,6 +37,9 @@ document.getElementById("close-navigation").onclick = function(){
         
         return;
     }
+*/
+
+    
 
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+    <title> sportopdracht</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sport.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kostya">
+
+    
+
+
+
+
+</head>
+
+<body>
+    <div id="close-navigation-wrapper">
+        <div class="navigation" >
+            <button id="close-navigation">&lt;</button>
+            <button class="redirect" onclick="location.href = '/';" >Menu</button>
+            <button class="redirect" onclick="location.href = '/over_ons';" style= "background-color: antiquewhite;">over ons</button>
+            <button class="redirect" onclick="location.href = '/waarom_is_sporten belangrijk';">waarom is sporten belangrijk</button>
+            <script src="{{url_for ('static' ,filename = 'scripts/navigation-bahaviour.js')}}"></script>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
