@@ -17,14 +17,12 @@
     <div id="close-navigation-wrapper">
         <div class="navigation" >
             <button id="close-navigation">&lt;</button>
-            <button class="redirect" onclick="location.href = '/';" >Menu</button>
-            <button class="redirect" onclick="location.href = '/over_ons';" style= "background-color: antiquewhite;">over ons</button>
-            <button class="redirect" onclick="location.href = '/waarom_is_sporten belangrijk';">waarom is sporten belangrijk</button>
+            <button class="redirect" onclick="location.href = '/';"{% if root_name == "/"%} style= "background-color: antiquewhite;"{%endif%}> Menu</button>
+            <button class="redirect" onclick="location.href = '/over_ons';" {% if root_name == "/over_ons"%} style= "background-color: antiquewhite;"{%endif%}>over ons</button>
+            <button class="redirect" onclick="location.href = '/waarom_is_sporten belangrijk';" {% if root_name == "/waarom_is_sporten belangrijk"%} style= "background-color: antiquewhite;"{%endif%}>waarom is sporten belangrijk</button>
             <script src="{{url_for ('static' ,filename = 'scripts/navigation-bahaviour.js')}}"></script>
 
 
 
         </div>
     </div>
-</body>
-</html>

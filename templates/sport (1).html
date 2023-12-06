@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <head>
 
     <title> sportopdracht</title>
@@ -26,8 +26,8 @@
 
         </div>
     </div>
-
-
+-->
+{% include "sidebuttons.html"%}
 
 
 
@@ -81,9 +81,9 @@
             
             <p><img src="{{url_for('static', filename='afbeeldingen/check.jpg')}}" alt="hi!" width="115%"></p>
             
-            <div style="text-align: center; background-image: url({{url_for('static', filename = 'afbeeldingen/moroccan-flower.png')}}); width: 115%;">
+            <div style="text-align: center; width: 125%; background-image: url('{{url_for("static" , filename="afbeeldingen/moroccan-flower.png")}}')">
                 Onze vereniging vindt daarom dat sporten belangrijk voor je is. Wil je een sport kiezen bij ons?
-                <p><button style="border-radius: 15%; background-color: aliceblue; color: red; font-size: 28px;" id="open-pop-up"> Meld je aan!</button></p>
+                <p><button style = "border-radius: 15%; background-color: aliceblue; color: red; font-size: 28px;" id="open-pop-up"> Meld je aan!</button></p>
                 <script type="text/javascript">
                 document.getElementById("open-pop-up").onclick = function(){
                 const pop_up = document.getElementsByClassName("pop-up");
