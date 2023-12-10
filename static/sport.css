@@ -109,7 +109,7 @@ div.bar{
     background-color: pink;
     right: -20%;
     z-index: 11;
-    transition:  1s;
+    
     transition: 1s;
     
 }

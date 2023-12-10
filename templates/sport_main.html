@@ -35,7 +35,7 @@
 
     <div class="article" style="margin-top: 15%; margin-left: 12%;">
 
-        <div >
+        <div style="height: auto;  display:inline-block" >
             <div class="sub-article" style="margin: 5%;">
                 "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit;
                 het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
@@ -45,17 +45,33 @@
             </div>
             <img src="{{url_for('static', filename ='afbeeldingen/de_vries.jpg') }}" alt="no image" style="width: 35%; margin-top: 15.5%;">
         </div>
+    
 
-
-    <div style="width: 100%; position: relative;;">
-        <div class="sub-article" style="margin: 5%;">
+    <div style="height: auto; display:inline-block">
+        <img src="{{ url_for('static', filename='afbeeldingen/de_vries.jpg')}}" alt="no image" style= "width:35%; margin-top: 15.5%; padding-left:2%">
+        <div class="sub-article" style="margin: 5%; float:right">
         "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit; 
         het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
          Laat ons je helpen de sport te vinden die bij jou past, zodat ook jij kunt ervaren wat sport echt betekent." 
         <p>- Sport de Vries</p>
         </div>
+    
+    
+    <div style="height: auto;  display:inline-block" >
+        <div class="sub-article" style="margin: 5%;">
+            "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit;
+            het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
+            Laat ons je helpen de sport te vinden die bij jou past, zodat ook jij kunt ervaren wat sport echt betekent."
+            <p>- Sport de Vries</p>
 
-        <img src="{{ url_for('static', filename='afbeeldingen/de_vries.jpg')}}" alt="no image" width="35%">
+        </div>
+        <img src="{{url_for('static', filename ='afbeeldingen/de_vries.jpg') }}" alt="no image" style="width: 35%; margin-top: 15.5%;">
+    </div>
+    
+    
+    
+
+        
     
     </div>
 
