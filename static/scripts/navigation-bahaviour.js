@@ -41,19 +41,23 @@
 document.getElementById("close-navigation").onclick = function(){
     const nav = document.getElementsByClassName("navigation");
     var default_val = '1s'
+    locked_val = "999999s"
     console.log(nav[0].style.transitionDuration)
-    if (nav[0].style.transitionDuration === default_val){
-        this.innerHTML = ">";
+    console.log(locked_val)
+    if (nav[0].style.transitionDuration !== locked_val){
         
-        nav[0].style.transitionDuration = "9999999999999s";
-        this.style.backgroundColor = "black";
-        console.log("???!!!!!@@##@#")
+        this.style.backgroundColor = "grey";
+        this.innerHTML = "&#128274;  ";
+        nav[0].style.transition = locked_val;
+        console.log("0???")
     }
     else{
-        console.log("??dsada?!!!")
-        this.style.backgroundColor = "grey";
+        console.log("???")
+
         this.innerHTML = "<";
-        nav[0].style.transition = default_val;
+        
+        nav[0].style.transitionDuration = default_val;
+        this.style.backgroundColor = "blue";
     }
 }
 
