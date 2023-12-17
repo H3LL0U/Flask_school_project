@@ -57,7 +57,7 @@ document.getElementById("close-navigation").onclick = function(){
         this.innerHTML = "<";
         
         nav[0].style.transitionDuration = default_val;
-        this.style.backgroundColor = "blue";
+        this.style.backgroundColor = "crimson";
     }
 }
 

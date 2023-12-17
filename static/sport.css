@@ -17,7 +17,7 @@ button{
 div.container{
     width: auto;
     height: auto;
-    background-image: url(afbeeldingen/more-leaves-on-green.png);
+    background-image: url(afbeeldingen/background_sport.png);
     display: flex;
     z-index: 4;
 
@@ -56,6 +56,7 @@ div.article{
     float: right;
     border-radius: 50px;
     padding: 2%;
+    margin-left: 2%;
     
     
 }   
@@ -70,9 +71,16 @@ div.sub-article{
     padding: 5%;
     float: left;
 
-
+    transition: 1s;
 }
-
+.sub-article:hover {
+    background-color: antiquewhite;
+    transform: translateX(-10%);
+     ;
+}
+.sub-article{
+    transition: 0.5s;
+}
 div.pop-up{
     position: fixed;
     top: 25%;
@@ -120,7 +128,7 @@ div.bar{
 }
 div.navigation button{
     width: 100%;
-    height: 10%;
+    height: 15%;
     padding-right: 5%;
     
     
@@ -138,7 +146,7 @@ div.navigation button{
     position:relative;
     border-radius: 15%;
     border-color: transparent;
-    background-color: blue;
+    background-color: crimson;
     
     
 
@@ -147,13 +155,23 @@ div.navigation button{
     width: auto;
     height: auto;
     z-index: 100;
-    background-color: aqua;
+    background-image: url(afbeeldingen/sidebar.jpg);
 }
 #close-navigation-wrapper:hover  .navigation{
     transform: translateX(-100%);
-    background-color: aqua;
-}
+    background-color: red;
     
+    
+}
+.redirect:hover {
+    background-color: antiquewhite;
+    transform: translateX(-10%);
+    width:115% ;
+}
+.redirect{
+    transition: 0.5s;
+
+}
 
 body{
     background-image: url(afbeeldingen/more-leaves-on-green.png);
