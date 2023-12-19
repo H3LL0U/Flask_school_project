@@ -75,8 +75,8 @@ div.sub-article{
 }
 .sub-article:hover {
     background-color: antiquewhite;
-    transform: translateX(-10%);
-     ;
+    
+    
 }
 .sub-article{
     transition: 0.5s;
@@ -172,7 +172,12 @@ div.navigation button{
     transition: 0.5s;
 
 }
-
+.home_logo{
+    position: fixed;
+    z-index: 100; 
+    left: 1% ;
+        
+}
 body{
     background-image: url(afbeeldingen/more-leaves-on-green.png);
     overflow-y:scroll;
