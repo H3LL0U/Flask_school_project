@@ -29,8 +29,10 @@ def waarom_is_sporten_belangrijk():
     
     return render_template("sport (1).html", root_name = "/waarom_is_sporten_belangrijk")
 
-@app.route("/")
+@app.route("/", methods = ["POST","GET"])
 def home ():
+    if request.method == "POST":
+        add_to_the_database("aangemelden", naam = request.form["naam"] , email = request.form["email"] , tel = request.form["tel"])
     return render_template("home.html", root_name = "/")
 
 

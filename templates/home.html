@@ -1,10 +1,56 @@
 {% include "sidebuttons.html"%}
-
+    <div class ="container" style="display: flex; flex-direction: column;">
     <header class="header">
         <a href="/"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" width="12%" class="home_logo"></a>
-        Home
+        Aanmelden voor Sportiva
     </header>
 
+<div style="width: 100%; display: flex; justify-content: center;">
+    <div class="article" style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-top: 10%; padding-bottom: 0%;">
+        <div class="sub-article" style="width: 70%; font-size: 5vh;">
+        <p>Word nu lid en ontdek een wereld van sportieve mogelijkheden! Meld je vandaag aan en maak deel uit van ons enthousiaste team. Samen bouwen we aan een gemeenschap vol passie, vriendschap en sportieve successen. Druk op de <span style="color: red; font-weight: bold;">aanmeld</span> knop en begin jouw sportieve reis! <span style="color: red;">
+            <br>|
+            <br>|
+            <br>|
+            <br>|
+            <br>\/
+        </span>
+        </p>
+    
+    </div>
+      <!--meld-je aan button-->
+      <p><button style="border-radius: 15%; background-color: aliceblue; color: red; font-size: 5vw;" id="open-pop-up"> Meld je aan!</button></p>
+      <script type="text/javascript">
+        document.getElementById("open-pop-up").onclick = function () {
+          const pop_up = document.getElementsByClassName("pop-up");
+          pop_up[0].style.display = "block";
+        }
+      </script>
+
+    <div class="sub-article" style="width: 70%; font-size: 2.5vh; padding-bottom: 4%; margin-bottom: 4% ; font-size: 5vh;">
+        Nog vragen over onze vereniging?<br>Verken de andere pagina's van deze website voor meer informatie!
+    </div>
+    </div>
+
+
+
+    </div>
+  </div>
+
+    <div >
+        <footer style="background-color: beige; font-size: 2.5vw; height: 100%; text-align: center; border: 5px solid #b86a34; border-radius: 50px;">
+            <p>Contacteer Sportiva:</p>
+
+            <p>Adres: Sportiva Verenigingsstraat 123, Sportstad</p>
+
+            <p>Telefoon: <a href="tel:0123456789"> 012-3456789</a></p>
+
+            <p>E-mail: <a href ="mailto:info@sportiva.nl">info@sportiva.nl</a> </p>
+
+            <p>Wij staan klaar om al je vragen te beantwoorden en je te verwelkomen in de Sportiva-community</p>
+        </footer>
+    </div>
+</div>
 
 
 
