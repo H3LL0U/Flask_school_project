@@ -6,22 +6,28 @@ app = Flask(__name__)
 def over_ons():
     return render_template("sport_main.html", root_name = "/over_ons")
 
-def add_to_the_database(table_name,**table_values):
+
+def add_to_the_database(table_name, **table_values):
     try:
         conn = sqlite3.connect("aangemelden.db")
         cur = conn.cursor()
-        create_table = f"CREATE TABLE IF NOT EXISTS {table_name} {('id INTEGER PRIMARY KEY AUTOINCREMENT' , )+ tuple((element+ ' TEXT' for element in  tuple(table_values.keys())))};"
-        cur.execute(create_table)
-        insert_table = f"INSERT INTO {table_name} {tuple((element+ ' TEXT' for element in  tuple(table_values.keys())))}  VALUES {tuple(table_values.values())};"
-        cur.execute(insert_table)
+
+       
+        create_table_query = f"CREATE TABLE IF NOT EXISTS {table_name} (id INTEGER PRIMARY KEY AUTOINCREMENT, "
+        create_table_query += ", ".join([f"{key} TEXT" for key in table_values.keys()])
+        create_table_query += ");"
+        cur.execute(create_table_query)
+
+        
+        insert_query = f"INSERT INTO {table_name} ({', '.join(table_values.keys())}) VALUES ({', '.join(['?' for _ in table_values.values()])});"
+        cur.execute(insert_query, list(table_values.values()))
+
         conn.commit()
-        conn.close()
+        print("Done!")
     except sqlite3.Error as error:
-        conn.close()
         print(error)
     finally:
-        print("Done!")
-    
+        conn.close()
 @app.route("/waarom_is_sporten_belangrijk", methods = ["POST", "GET"])
 def waarom_is_sporten_belangrijk():
     if request.method == "POST":
