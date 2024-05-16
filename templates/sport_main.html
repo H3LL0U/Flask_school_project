@@ -23,9 +23,9 @@
     </div>
     -->
     {% include "sidebuttons.html"%}
-<div class="container" style="display: flex; flex-direction: column;">
+<div class="container" >
     <header class="header">
-        <a href="/"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" style="width: 12%;" class="home_logo"></a>
+        <a href="/" class="home"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" class="home_logo"></a>
         Over Sportiva
     </header>
 
@@ -34,7 +34,7 @@
         <h1>De Geboorte van Sportiva</h1>
         <p>In het jaar 1950, te midden van een bruisende stad, werd Sportiva geboren. Een groep enthousiaste sportliefhebbers, verenigd door hun passie voor competitie en camaraderie, richtte deze sportvereniging op. De oprichters waren afkomstig uit diverse achtergronden, maar één ding verenigde hen: de liefde voor sport. Ze begonnen met bescheiden doelen, maar hun vastberadenheid zou de vereniging vormgeven.</p>
         <div style="text-align: center;">
-            <img src="{{url_for('static', filename='afbeeldingen/oprichters.jpg')}}" style="width: 20%;" alt="Oprichters">
+            <img src="{{url_for('static', filename='afbeeldingen/oprichters.jpg')}}" id="oprichters" alt="Oprichters">
             <h5>Dat zijn de oprichters van onze vereniging Jan de Boer (linkerkant) en John Jansen (rechterkant)</h5>
         </div>
         <p>In de eerste jaren was Sportiva een bescheiden club, met een handvol leden die voetbal als hun primaire activiteit kozen. De pioniersgeest was echter sterk, en al snel werden andere sporten zoals tennis, basketbal en atletiek geïntroduceerd. De vereniging groeide gestaag en begon lokale toernooien te organiseren.</p>
@@ -80,39 +80,41 @@
         </div>
 
 
-        <div style="height: auto; display:inline-block">
-        
-            <div class="sub-article" style="margin: 5%;">
+        <div class="sub-article-container">
+        <img src="{{url_for('static', filename ='afbeeldingen/de_vries.jpg') }}" id = "lid_image" alt="no image" >
+            <div class="sub-article" id="lid_comment">
                 "Als lid van deze geweldige sportvereniging heb ik ontdekt dat sporten meer is dan alleen fysieke activiteit;
                 het is een reis naar zelfontdekking. Hier vond ik mijn passie, mijn team en mijn plek in de sportwereld.
                  Laat ons je helpen de sport te vinden die bij jou past, zodat ook jij kunt ervaren wat sport echt betekent."
                 <p>- Sport de Vries</p>
 
             </div>
-            <img src="{{url_for('static', filename ='afbeeldingen/de_vries.jpg') }}" alt="no image" style="width: 35%; margin-top: 15.5%;">
+            
         </div>
     
 
-    <div style="height: auto; display:inline-block">
-        <img src="{{ url_for('static', filename='afbeeldingen/Laura van Dijk.jpg')}}" alt="no image" style= "width:35%; margin-top: 15.5%; padding-left:2%">
-        <div class="sub-article" style="margin: 5%; float:right">
+    <div class="sub-article-container">
+        <img src="{{ url_for('static', filename='afbeeldingen/Laura van Dijk.jpg')}}" alt="no image" id = "lid_image">
+        <div class="sub-article" id="lid_comment" style=" float:right">
             "Sportiva is voor mij meer dan een vereniging; het is een tweede thuis. De sfeer van teamgeest en vriendschap is ongeëvenaard. Ik ben dankbaar voor de kansen om te groeien als atleet en om betekenisvolle relaties op te bouwen. Samen streven we naar succes op en naast het veld!"
         <p>-Laura van Dijk</p>
         </div>
     
     
-    <div style="height: auto;  display:inline-block" >
-        <div class="sub-article" style="margin: 5%;">
+    <div class="sub-article-container" >
+        <img src="{{url_for('static', filename ='afbeeldingen/Mohammed Ali Khan.jpg') }}" id = "lid_image" alt="no image" >
+        <div class="sub-article" id="lid_comment" >
+            
             "Als liefhebber van verschillende sporten vond ik bij Sportiva de diversiteit die ik zocht. Het is een plek waar verschillende achtergronden samenkomen voor één passie: sport. Ik ben trots deel uit te maken van deze gemeenschap die niet alleen focust op prestaties, maar ook op inclusie en respect."
             <p>- Mohammed Ali Khan</p>
 
         </div>
-        <img src="{{url_for('static', filename ='afbeeldingen/Mohammed Ali Khan.jpg') }}" alt="no image" style="width: 35%; margin-top: 15.5%;">
+        
     </div>
 
-    <div style="height: auto; display:inline-block">
-        <img src="{{ url_for('static', filename='afbeeldingen/Emma Hendriks.jpg')}}" alt="no image" style= "width:35%; margin-top: 15.5%; padding-left:2%">
-        <div class="sub-article" style="margin: 5%; float:right">
+    <div class="sub-article-container">
+        <img src="{{ url_for('static', filename='afbeeldingen/Emma Hendriks.jpg')}}" alt="no image" id = "lid_image">
+        <div class="sub-article" id="lid_comment" style="float:right">
             "De jeugdontwikkelings- programma's van Sportiva hebben een enorme impact gehad op mijn leven en dat van mijn kinderen. Mijn zoon heeft hier zijn liefde voor voetbal ontdekt, en mijn dochter heeft zich ontwikkeld als een veelbelovende tennisser. Het is fantastisch om te zien hoe de vereniging bijdraagt aan de groei van de jeugd."
         <p>-Emma Hendriks</p>
         </div>

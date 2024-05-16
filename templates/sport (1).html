@@ -44,29 +44,29 @@
 
 
 
-    <div class="container">
+    <div class="container" >
         <header class="header">
-           <a href="/"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" style="width: 12% ;" class="home_logo"></a>
+           <a href="/" class="home_image"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" class="home_logo"></a>
             Positieve effecten van sporten
             
         </header>
 
 
-        <div class="leftside_container">
+        <div class="leftside_container" style="margin-top: 10%;" id="positief_effect_container">
             <div class="images">
-            <p><img src="{{url_for('static', filename='afbeeldingen/rennen.jpg')}}"  style="width: 115%" alt = "no image"></p>
+            <img src="{{url_for('static', filename='afbeeldingen/rennen.jpg')}}" class="image_pos_effect_sport"  alt = "no image">
             
-            <img src="{{url_for('static', filename='afbeeldingen/american_footbal.jpg')}}" style="width: 115%" alt = "no image">
+            <img src="{{url_for('static', filename='afbeeldingen/american_footbal.jpg')}}"class="image_pos_effect_sport"  alt = "no image">
             
-            <p><img src="{{ url_for('static', filename='afbeeldingen/Banner Football.jpg')}}"  style="width: 115%" alt = "no image"></p>
+            <img src="{{ url_for('static', filename='afbeeldingen/Banner Football.jpg')}}"class="image_pos_effect_sport"   alt = "no image">
             
-            <img src="{{url_for('static', filename='afbeeldingen/basketbal.jpg')}}" style="width: 115%" alt = "no image">
+            <img src="{{url_for('static', filename='afbeeldingen/basketbal.jpg')}}"class="image_pos_effect_sport"  alt = "no image">
             
-            <p><img src="{{url_for('static', filename='afbeeldingen/check.jpg')}}" alt = "no image" style="width: 115%"></p>
+            <img src="{{url_for('static', filename='afbeeldingen/check.jpg')}}" alt = "no image" class="image_pos_effect_sport">
             
-            <div style="text-align: center; width: 125%;  background-image: url('{{url_for("static" , filename="afbeeldingen/moroccan-flower.png")}}')">
+            <div class="meld_aan_button_container">
                 Onze vereniging vindt daarom dat sporten belangrijk voor je is. Wil je een sport kiezen bij ons?
-                <p><button style = "border-radius: 15%; background-color: aliceblue; color: red; font-size: 28px;" id="open-pop-up"> Meld je aan!</button></p>
+                <button style = "border-radius: 15%; background-color: aliceblue; color: red; font-size: 28px;" id="open-pop-up"> Meld je aan!</button>
                 <script type="text/javascript">
                 document.getElementById("open-pop-up").onclick = function(){
                 const pop_up = document.getElementsByClassName("pop-up");
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-            <div class="article">
+            <div class="article" id="effecten_article">
                 <h2>Positieve effecten van sporten</h2>
                 <h3>Goed voor hart en bloedvaten</h3>
                 <p>Een half uur bewegen per dag houdt hart en bloedvaten in conditie en verlaagt de bloeddruk. Door actief bezig te zijn verhoogt de high densitylipoproteïne (HDL), dat is het goede cholesterol, en vermindert de ongezonde triglyceriden (dat is het slechte cholesterol). Dit is goed voor je bloedvaten.

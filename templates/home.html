@@ -1,13 +1,13 @@
 {% include "sidebuttons.html"%}
     <div class ="container" style="display: flex; flex-direction: column;">
     <header class="header">
-        <a href="/"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE"style="width:12%" class="home_logo"></a>
+        <a href="/" class="home_image"> <img src="{{url_for('static', filename='afbeeldingen/Logo SPORTIVA 3.png')}}" alt="NO IMAGE" class="home_logo"></a>
         Aanmelden voor Sportiva
     </header>
 
 <div style="width: 100%; display: flex; justify-content: center;">
-    <div class="article" style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-top: 10%; padding-bottom: 0%;">
-        <div class="sub-article" style="width: 70%; font-size: 5vh;">
+    <div class="article meld_nu_aan_container" style="display: flex;  justify-content: center; flex-direction: column; margin-top: 10%; padding-bottom: 0%;" >
+        <div class="sub-article meld_nu_aan" >
         <p>Word nu lid en ontdek een wereld van sportieve mogelijkheden! Meld je vandaag aan en maak deel uit van ons enthousiaste team. Samen bouwen we aan een gemeenschap vol passie, vriendschap en sportieve successen. Druk op de <span style="color: red; font-weight: bold;">aanmeld</span> knop en begin jouw sportieve reis! <span style="color: red;">
             <br>|
             <br>|
@@ -27,7 +27,7 @@
         }
       </script>
 
-    <div class="sub-article" style="width: 70%; font-size: 2.5vh; padding-bottom: 4%; margin-bottom: 4% ; font-size: 5vh;">
+    <div class="sub-article meld_nu_aan" style="margin-bottom: 2%;">
         Nog vragen over onze vereniging?<br>Verken de andere pagina's van deze website voor meer informatie!
     </div>
     </div>
@@ -37,8 +37,8 @@
     </div>
   </div>
 
-    <div >
-        <footer style="background-color: beige; font-size: 2.5vw; height: 100%; text-align: center; border: 5px solid #b86a34; border-radius: 50px;">
+    <div class="container">
+        <footer  id="info">
             <p>Contacteer Sportiva:</p>
 
             <p>Adres: Sportiva Verenigingsstraat 123, Sportstad</p>

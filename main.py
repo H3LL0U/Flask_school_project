@@ -1,9 +1,9 @@
 from flask import Flask, render_template , request
 import sqlite3
-from flask_ngrok import run_with_ngrok
+#from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
 
-run_with_ngrok(app=app)
+#run_with_ngrok(app=app)
 @app.route("/over_ons")
 def over_ons():
     return render_template("sport_main.html", root_name = "/over_ons")
@@ -45,4 +45,4 @@ def home ():
 
 
 if __name__ =="__main__":
-    app.run()
+    app.run(host="0.0.0.0",port=5000, debug=True )
